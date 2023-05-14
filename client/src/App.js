@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, useRoutes} from 'react-router-dom';
 import IndexView from './views/IndexView';
 import CreateView from './views/CreateView';
 import EditView from './views/EditView';
@@ -12,7 +12,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/players' element={<IndexView/>} default/>
+          {["/", "/players"].map((path, index) => 
+            <Route path={path} element={<IndexView/>} key={index} />
+          )}
+          {/* <Route path='/players)' element={<IndexView/>}/> */}
           <Route path='/players/create' element={<CreateView/>}/>
           <Route path='/players/:id' element={<DetailView/>}/>
           <Route path='/players/:id/edit' element={<EditView/>} />
