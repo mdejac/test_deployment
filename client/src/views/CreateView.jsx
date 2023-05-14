@@ -31,7 +31,7 @@ const CreateView = () => {
     <div>
         <Navbar/>
         <div className='container border border-black p-4'>
-            <h3 className="text-start"><Link to={'/'}>List</Link> | Add a Player</h3>
+            <h3 className="text-start"><Link to={'/players'}>List</Link> | Add a Player</h3>
             <Form title={"Add Player"} initialState={initialState} onSubmitProps={createObj} errors={errors}/>
         </div>
     </div>

@@ -27,7 +27,7 @@ const EditView = () => {
   const editObj = data => {
       console.log('Update player info', data);
       axios.patch(`http://localhost:8000/api/players/${id}/edit`, data)
-          .then(res => navigate('/'))
+          .then(res => navigate('/players'))
           .catch(err => {
               const errorResponse = err.response.data.errors;
               const errorArr = [];
