@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/players' element={<IndexView/>}/>
+          <Route path='/players' element={<IndexView/>} default/>
           <Route path='/players/create' element={<CreateView/>}/>
           <Route path='/players/:id' element={<DetailView/>}/>
           <Route path='/players/:id/edit' element={<EditView/>} />
