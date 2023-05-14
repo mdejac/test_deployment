@@ -25,7 +25,7 @@ const DetailView = () => {
         <span>
           <CancelButton/>|
           <EditButton id={objInfo._id}/> |
-          <DeleteButton id={objInfo._id} successCallBack={() => navigate('/players')} />
+          <DeleteButton id={objInfo._id} successCallBack={() => navigate('/')} />
         </span>
     </div>
   )
