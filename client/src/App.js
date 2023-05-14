@@ -15,7 +15,7 @@ function App() {
           {["/", "/players"].map((path, index) => 
             <Route path={path} element={<IndexView/>} key={index} />
           )}
-          {/* <Route path='/players)' element={<IndexView/>}/> */}
+          {/* <Route path='/players' element={<IndexView/>}/> */}
           <Route path='/players/create' element={<CreateView/>}/>
           <Route path='/players/:id' element={<DetailView/>}/>
           <Route path='/players/:id/edit' element={<EditView/>} />
