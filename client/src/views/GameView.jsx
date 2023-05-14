@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {useParams, Link} from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import GameBar from '../components/GameBar'
 import StatusButtons from '../components/StatusButtons'
 
 const GameView = () => {
@@ -20,11 +21,7 @@ const GameView = () => {
             <Navbar/>
             <div className='container border border-black p-3'>
                 <h2 className='text-start'>Player Status - Game {gameNumber}</h2>
-                <div className='text-center'>
-                    <Link className='mx-2' to={`/status/game/1`}>Game 1</Link> |
-                    <Link className='mx-2' to={`/status/game/2`}>Game 2</Link> |
-                    <Link className='mx-2' to={`/status/game/3`}>Game 3</Link>
-                </div>
+                <GameBar gameNumber={gameNumber} />
                 <div className='container border border-black mt-3 p-4'>
                     <table className='table table-striped table-bordered align-middle'>
                         <thead>
